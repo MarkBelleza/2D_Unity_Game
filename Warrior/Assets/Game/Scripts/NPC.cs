@@ -8,7 +8,7 @@ public class NPC : MonoBehaviour
     public Animator anim;
     public int maxHealth = 100;
     int currentHealth;
-
+    public EnemyAI script; //this is from the "Custom AI Testing" gameObject
     public Rigidbody2D body;
     // Start is called before the first frame update
     void Start()
@@ -58,12 +58,10 @@ public class NPC : MonoBehaviour
         //Die Animation
         anim.SetBool("isDead", true); 
 
-        //Disable enemy
-
-        //Change Layer to Player 
-        gameObject.layer = LayerMask.NameToLayer("Player");
-        //Disable the NPC script
-        this.enabled = false; 
+        //Disable enemy -- 
+        gameObject.layer = LayerMask.NameToLayer("Player"); //Change Layer to Player 
+        this.enabled = false; //Disable the NPC script
+        script.enabled = false; //Disable EnemyAI script
     }
 
 }
