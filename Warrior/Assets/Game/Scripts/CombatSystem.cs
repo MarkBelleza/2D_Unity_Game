@@ -1,0 +1,50 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CombatSystem : MonoBehaviour
+{
+    public Animator anima; // Animator component already taken from player inspector screen 
+    public Transform attackPoint;
+    public float attackRange = 0.5f;
+    public LayerMask enemyLayers;
+    public int attackPower = 15;
+    public float attackRate = 2f;
+    float nextAttackTime = 0f;
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(Time.time >= nextAttackTime)
+        {
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                Attack();
+                nextAttackTime = Time.time + 1f / attackRate; 
+                //wait for 1/attackRate time before attacking again
+            }
+        }
+    }
+
+    void Attack()
+    {
+        anima.SetTrigger("Attack1");
+
+        // Detects enemies in range of attack
+        Collider2D[] enemiesHit = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers); 
+
+        //Damage enemies hit
+        foreach(Collider2D enemy in enemiesHit)
+        {
+            enemy.GetComponent<NPC>().TakeDamage(attackPower);
+        }
+    }
+
+    //Draws the attack range
+    private void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null)
+            return;
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    }
+}
