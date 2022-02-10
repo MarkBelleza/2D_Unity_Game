@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CombatSystem : MonoBehaviour
+public class CombatSystem : Player
 {
     public Animator anima; // Animator component already taken from player inspector screen 
     public Transform attackPoint;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
     public int attackPower = 15;
-    public float attackRate = 2f;
+    public float attackRate = 1.8f;
     float nextAttackTime = 0f;
 
     // Update is called once per frame
@@ -19,8 +19,10 @@ public class CombatSystem : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
+                
                 Attack();
-                nextAttackTime = Time.time + 1f / attackRate; 
+                nextAttackTime = Time.time + 1f / attackRate;
+                
                 //wait for 1/attackRate time before attacking again
             }
         }
@@ -28,6 +30,7 @@ public class CombatSystem : MonoBehaviour
 
     void Attack()
     {
+        setMoveForce(7f);
         anima.SetTrigger("Attack1");
 
         // Detects enemies in range of attack
@@ -38,6 +41,7 @@ public class CombatSystem : MonoBehaviour
         {
             enemy.GetComponent<NPC>().TakeDamage(attackPower);
         }
+        setMoveForce(10f);
     }
 
     //Draws the attack range

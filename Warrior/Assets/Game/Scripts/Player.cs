@@ -17,6 +17,12 @@ public class Player : MonoBehaviour
     private string FALLING_ANIMATION = "Falling";
     private bool isGround = true;
 
+
+    public void setMoveForce(float val)
+    {
+        moveForce = val;
+    }
+
     private void Awake()
     {
         myBody = GetComponent<Rigidbody2D>();
@@ -34,7 +40,12 @@ public class Player : MonoBehaviour
     {
         PlayerMoveKeyboard(); //Running Animation
         PlayerJump();
-        anim.SetFloat(FALLING_ANIMATION, myBody.velocity.y); // Falling Animation
+        anim.SetFloat(FALLING_ANIMATION, myBody.velocity.y); // Falling Animation\
+
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            moveForce = 5f; 
+        }
         
     }
 
