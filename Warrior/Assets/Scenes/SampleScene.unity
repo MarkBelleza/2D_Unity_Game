@@ -1621,7 +1621,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 127328070}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.173914, y: -2.1688113, z: 0.11035879}
+  m_LocalPosition: {x: 12.182, y: -1.548, z: 0.11035879}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2092749851}
@@ -16255,17 +16255,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC
       objectReference: {fileID: 0}
+    - target: {fileID: 7981097825011242859, guid: 29a689b074560564ab9a9a616ff1eac5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7981097825011242863, guid: 29a689b074560564ab9a9a616ff1eac5, type: 3}
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7981097825011242863, guid: 29a689b074560564ab9a9a616ff1eac5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.91
+      value: 12.03
       objectReference: {fileID: 0}
     - target: {fileID: 7981097825011242863, guid: 29a689b074560564ab9a9a616ff1eac5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.83
+      value: -0.58
       objectReference: {fileID: 0}
     - target: {fileID: 7981097825011242863, guid: 29a689b074560564ab9a9a616ff1eac5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -25152,6 +25156,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8366676567627033204, guid: b495f744da09f9446a6470e94af87b8f, type: 3}
+      propertyPath: startDashTime
+      value: 1.8
+      objectReference: {fileID: 0}
     - target: {fileID: 8366676567627033211, guid: b495f744da09f9446a6470e94af87b8f, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -25199,6 +25207,14 @@ PrefabInstance:
     - target: {fileID: 8366676567627033213, guid: b495f744da09f9446a6470e94af87b8f, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8366676567627033213, guid: b495f744da09f9446a6470e94af87b8f, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8366676567627033215, guid: b495f744da09f9446a6470e94af87b8f, type: 3}
+      propertyPath: startDashTime
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b495f744da09f9446a6470e94af87b8f, type: 3}
