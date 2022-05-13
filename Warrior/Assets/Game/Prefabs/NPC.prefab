@@ -20,7 +20,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7981097825011242863
 Transform:
   m_ObjectHideFlags: 0
@@ -156,4 +156,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 7981097825011242862}
   maxHealth: 100
+  script: {fileID: 0}
   body: {fileID: 7981097825011242858}

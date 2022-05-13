@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 8366676567627033204}
   m_Layer: 7
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -199,6 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e315df235eaf2b6488fbbd0d8eb35012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myBody: {fileID: 0}
   anima: {fileID: 8366676567627033214}
   attackPoint: {fileID: 8366676566533495884}
   attackRange: 1.22
