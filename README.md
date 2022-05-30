@@ -8,10 +8,12 @@ Note: Game is still work in progress.
 
 
 Movement:
+
 https://user-images.githubusercontent.com/98550319/168198681-560be9a4-9021-4150-a276-76706f705e8b.mp4
 
 
 Combat:
+
 https://user-images.githubusercontent.com/98550319/168198918-d4e83ae9-ea20-4bf9-9488-ade68f794472.mp4
 
 The original concept for the game is that it will be a multiplayer game where players will have to
